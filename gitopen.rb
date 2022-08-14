@@ -4,14 +4,14 @@
 class Gitopen < Formula
   desc 'Quickly open any Git repository remote as a link in your browser.'
   homepage 'https://github.com/Flexicon/gitopen'
-  url 'https://github.com/Flexicon/gitopen/archive/v0.0.3.tar.gz'
-  sha256 '6b57262130ef0c50ea811d532f1d68e84380b4795df87ca78ed2a82675553cdb'
+  url 'https://github.com/Flexicon/gitopen/archive/v0.0.4.tar.gz'
+  sha256 '2214a5b6e5cfcbd609a89387464017ee7f7b692fb0965700beeb18d1f941f5e3'
   license 'MIT'
 
   depends_on 'go@1.18' => :build
 
   pour_bottle? do
-    reason "Always compile from source."
+    reason 'Always compile from source.'
     satisfy { false }
   end
 
@@ -21,6 +21,6 @@ class Gitopen < Formula
   end
 
   test do
-    assert_match 'gitopen v0.0.3', shell_output('gitopen version 2>&1')
+    assert_match 'gitopen v0.0.4', shell_output('gitopen version 2>&1')
   end
 end
