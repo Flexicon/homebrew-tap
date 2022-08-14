@@ -10,6 +10,11 @@ class Gitopen < Formula
 
   depends_on 'go@1.18' => :build
 
+  pour_bottle? do
+    reason "Always compile from source."
+    satisfy { false }
+  end
+
   def install
     system 'go', 'build', '-v', *std_go_args(ldflags: '-s -w'), '.'
     prefix.install_metafiles
