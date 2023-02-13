@@ -8,7 +8,7 @@ class Gitopen < Formula
   sha256 '2214a5b6e5cfcbd609a89387464017ee7f7b692fb0965700beeb18d1f941f5e3'
   license 'MIT'
 
-  depends_on 'go@1.18' => :build
+  depends_on 'go' => :build
 
   pour_bottle? do
     reason 'Always compile from source.'
