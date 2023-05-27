@@ -9,7 +9,8 @@ class Tweather < Formula
   license 'MIT'
 
   def install
-    prefix.install 'bin/', 'lib/'
+    bin.install 'bin/tweather'
+    prefix.install 'lib/'
     prefix.install_metafiles
   end
 end
